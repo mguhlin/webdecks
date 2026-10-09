@@ -25,18 +25,20 @@ This repo is the single source of truth for the deck system across projects. Poi
 
 ## Examples — decks in the wild
 
-**Latest (v5):**
+Every deck below runs the current v5 framework (two-monitor presenter view with A−/A+ notes, phone reflow, PDF export).
+
+**Flagship:**
 - [The Essential Learning Expectations — Facilitator deck](https://mglearn.github.io/eles/decks/facilitator.html) (TCEA)
 - [Trust, Transparency, and AI](https://mguhlin.github.io/nspa/2026/p/webdeck.html) (NSPA 2026)
 - [AI for the Defense — Overview](https://mglearn.github.io/legalai/decks/0-overview.html) (TCDLA)
 
-**More decks** (earlier framework versions):
-- [Create AI-Powered Publications and Dashboards](https://mguhlin.github.io/creations/tcea/webdecks/aipower/)
-- [AI as Your Instructional Design Partner](https://mguhlin.github.io/creations/tcea/webdecks/aidesign/)
-- [iBINGO Game Maker](https://mguhlin.github.io/creations/tcea/webdecks/ibingo/)
-- [NSF TechAccess: AI-Ready America](https://mguhlin.github.io/creations/tcea/webdecks/nsf26/)
-- [LearnDash Risk Assessment and Transition Path](https://mguhlin.github.io/creations/tcea/webdecks/ldtransition/)
-- [Newsletter AI: Copyright-Safe Curation](https://mguhlin.github.io/creations/tcea/webdecks/newsmaker-copyright/)
+**TCEA Creations** — each re-skinned to its own palette:
+- [Create AI-Powered Publications and Dashboards](https://mguhlin.github.io/creations/tcea/webdecks/aipower/) — navy & gold, 24 slides
+- [AI as Your Instructional Design Partner](https://mguhlin.github.io/creations/tcea/webdecks/aidesign/) — navy & gold keynote, 40 slides
+- [iBINGO Game Maker](https://mguhlin.github.io/creations/tcea/webdecks/ibingo/) — playful multi-color, Fredoka display
+- [NSF TechAccess: AI-Ready America](https://mguhlin.github.io/creations/tcea/webdecks/nsf26/) — NSF navy & gold leadership briefing
+- [LearnDash Risk Assessment and Transition Path](https://mguhlin.github.io/creations/tcea/webdecks/ldtransition/) — navy & gold executive brief
+- [Newsletter AI: Copyright-Safe Curation](https://mguhlin.github.io/creations/tcea/webdecks/newsmaker-copyright/) — teal & amber editorial
 
 ## Maintaining this repo
 
