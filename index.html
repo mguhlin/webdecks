@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Deck v5 — self-contained HTML slide decks</title>
+<meta name="description" content="Web Deck v5: a tiny system for self-contained HTML slide decks. Spec, framework, template, and a standalone instructions file you can hand to any chatbot. MIT licensed.">
+<meta property="og:title" content="Web Deck v5">
+<meta property="og:description" content="Self-contained HTML slide decks: 1280x720 canvas, teleprompter notes, two-monitor presenter view, PDF export, reflow. Spec + framework + a chatbot-ready standalone file.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Libre+Franklin:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#102A54; --navy-dk:#0B1D33; --steel:#2F5F8F; --silver:#C8D2DC;
+    --lgray:#F5F8FC; --hair:#E2E8F2; --slate:#51617A; --text:#1C2B44;
+    --metal:linear-gradient(180deg,#EEF3F9 0%,#C8D2DC 48%,#93AFCE 100%);
+    --paper:linear-gradient(174deg,#FDFEFF 0%,#EEF3FA 100%);
+    --display:"Fraunces",Georgia,serif; --body:"Libre Franklin",system-ui,sans-serif; --mono:"IBM Plex Mono",monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--body);color:var(--text);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:860px;margin:0 auto;padding:0 24px}
+  header{background:radial-gradient(120% 90% at 12% -10%,#1B3E6E 0%,rgba(27,62,110,0) 55%),linear-gradient(160deg,#0E2545 0%,#081627 100%);color:#F4F8FE;position:relative;overflow:hidden}
+  header::before{content:"";position:absolute;left:0;top:0;bottom:0;width:8px;background:var(--metal)}
+  header .wrap{padding:64px 24px 56px}
+  .eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--silver);margin-bottom:16px}
+  h1{font-family:var(--display);font-size:clamp(38px,7vw,64px);font-weight:600;line-height:1.02;letter-spacing:-.02em;color:#F4F8FE}
+  .lede{font-family:var(--display);font-style:italic;font-size:clamp(18px,2.6vw,23px);color:var(--silver);margin-top:18px;max-width:46ch}
+  main .wrap{padding:52px 24px 72px}
+  h2{font-family:var(--display);font-size:28px;font-weight:600;color:var(--navy);margin:44px 0 14px;padding-top:26px;border-top:1px solid var(--hair)}
+  h2:first-child{border-top:0;padding-top:0;margin-top:0}
+  p{margin:0 0 14px}
+  p.sub{color:var(--slate)}
+  ul{margin:0 0 16px 0;padding-left:0;list-style:none}
+  li{position:relative;padding-left:26px;margin-bottom:9px}
+  li::before{content:"";position:absolute;left:3px;top:11px;width:9px;height:9px;background:var(--metal);transform:rotate(45deg)}
+  a{color:var(--steel);font-weight:600;text-decoration:none;border-bottom:1px solid var(--hair)}
+  a:hover{color:var(--navy);border-color:var(--steel)}
+  code{font-family:var(--mono);font-size:.88em;background:var(--lgray);border:1px solid var(--hair);border-radius:4px;padding:1px 6px;color:var(--navy)}
+  .downloads{display:grid;grid-template-columns:1fr;gap:12px;margin:20px 0}
+  @media(min-width:620px){.downloads{grid-template-columns:1fr 1fr}}
+  .dl{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--hair);border-left:4px solid var(--steel);border-radius:9px;padding:15px 18px;box-shadow:0 1px 2px rgba(16,42,84,.05),0 10px 24px rgba(16,42,84,.06);text-decoration:none;border-bottom:1px solid var(--hair);border-left:4px solid var(--steel)}
+  .dl:hover{border-left-color:var(--navy);transform:translateY(-1px);transition:transform .12s}
+  .dl .ic{font-size:22px;flex:none}
+  .dl .t{font-family:var(--display);font-size:18px;font-weight:600;color:var(--navy);line-height:1.2}
+  .dl .d{font-size:13px;color:var(--slate);font-weight:400;margin-top:2px}
+  .dl.feature{border-left-color:#C9962F;background:linear-gradient(180deg,#fffdf7,#fff)}
+  .steps{counter-reset:s;margin:14px 0}
+  .steps li{padding-left:40px;margin-bottom:12px}
+  .steps li::before{counter-increment:s;content:counter(s);background:var(--navy);color:#fff;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:14px;top:2px;left:0;transform:none}
+  blockquote{background:var(--navy);color:#EAF1FB;border-radius:8px;padding:18px 22px;margin:16px 0;position:relative;overflow:hidden;font-size:15px}
+  blockquote::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--metal)}
+  blockquote code{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:#F4F8FE}
+  footer{border-top:1px solid var(--hair);background:var(--lgray)}
+  footer .wrap{padding:28px 24px;font-size:14px;color:var(--slate);display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">✦ Open slide-deck system · MIT licensed</div>
+    <h1>Web Deck v5</h1>
+    <p class="lede">A tiny system for self-contained HTML slide decks. No build step, no framework, no dependency beyond Google Fonts.</p>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+
+    <h2>What it is</h2>
+    <p>A single HTML file that presents fullscreen, carries teleprompter <strong>speaker notes</strong>, drives a two-monitor <strong>presenter view</strong> (with A−/A+ notes resizing), exports to <strong>PDF</strong>, and reflows to read on a phone.</p>
+    <ul>
+      <li>Fixed 1280×720 canvas that scales to any screen.</li>
+      <li>Cover, divider, and content slide types with ready-made blocks (bullets, cards, steps, callouts, compare, scenario, and more).</li>
+      <li>Editorial blue-and-silver reference skin you can re-skin per project with a few CSS variables.</li>
+      <li>WCAG 2.1 AA layer: reflow, visible focus, live region, reduced motion.</li>
+    </ul>
+
+    <h2>Examples — decks in the wild</h2>
+    <p class="sub">Real decks built with this system. The first three run the current v5 framework; the rest are earlier versions kept here as references.</p>
+    <p><strong>Latest (v5)</strong></p>
+    <ul>
+      <li><a href="https://mglearn.github.io/eles/decks/facilitator.html" target="_blank" rel="noopener">The Essential Learning Expectations — Facilitator deck</a> (TCEA): all five roles, per-role scenarios, jump menu, A−/A+ presenter notes.</li>
+      <li><a href="https://mguhlin.github.io/nspa/2026/p/webdeck.html" target="_blank" rel="noopener">Trust, Transparency, and AI</a> (NSPA 2026): scholarship-review workshop deck.</li>
+      <li><a href="https://mglearn.github.io/legalai/decks/0-overview.html" target="_blank" rel="noopener">AI for the Defense — Overview</a> (TCDLA): the reference blue-and-silver skin the framework ships with.</li>
+    </ul>
+    <p><strong>More decks</strong> (earlier framework versions)</p>
+    <ul>
+      <li><a href="https://mguhlin.github.io/creations/tcea/webdecks/aipower/" target="_blank" rel="noopener">Create AI-Powered Publications and Dashboards</a></li>
+      <li><a href="https://mguhlin.github.io/creations/tcea/webdecks/aidesign/" target="_blank" rel="noopener">AI as Your Instructional Design Partner</a></li>
+      <li><a href="https://mguhlin.github.io/creations/tcea/webdecks/ibingo/" target="_blank" rel="noopener">iBINGO Game Maker</a></li>
+      <li><a href="https://mguhlin.github.io/creations/tcea/webdecks/nsf26/" target="_blank" rel="noopener">NSF TechAccess: AI-Ready America</a></li>
+      <li><a href="https://mguhlin.github.io/creations/tcea/webdecks/ldtransition/" target="_blank" rel="noopener">LearnDash Risk Assessment and Transition Path</a></li>
+      <li><a href="https://mguhlin.github.io/creations/tcea/webdecks/newsmaker-copyright/" target="_blank" rel="noopener">Newsletter AI: Copyright-Safe Curation</a></li>
+    </ul>
+
+    <h2>Download</h2>
+    <p class="sub">Grab the chatbot-ready file to build decks by prompting, or the framework files to drop into a project.</p>
+    <div class="downloads">
+      <a class="dl feature" href="webdeck_v5_standalone.md" download>
+        <span class="ic">🤖</span>
+        <span><span class="t">Standalone instructions</span><span class="d">One file for chatbots — spec + framework embedded. Upload and prompt.</span></span>
+      </a>
+      <a class="dl" href="webdeck_spec_v5.md" download>
+        <span class="ic">📘</span>
+        <span><span class="t">Spec (webdeck_spec_v5.md)</span><span class="d">The full specification.</span></span>
+      </a>
+      <a class="dl" href="assets/deck-framework.css" download>
+        <span class="ic">🎨</span>
+        <span><span class="t">deck-framework.css</span><span class="d">Design system, layout, chrome, print, a11y.</span></span>
+      </a>
+      <a class="dl" href="assets/deck-framework.js" download>
+        <span class="ic">⚙️</span>
+        <span><span class="t">deck-framework.js</span><span class="d">Navigation, presenter view, sync, print.</span></span>
+      </a>
+      <a class="dl" href="decks/template-deck.html" download>
+        <span class="ic">📄</span>
+        <span><span class="t">template-deck.html</span><span class="d">Starter deck. Copy and replace the slides.</span></span>
+      </a>
+      <a class="dl" href="decks/template-deck.html">
+        <span class="ic">👁️</span>
+        <span><span class="t">View the template live</span><span class="d">See the framework running in your browser.</span></span>
+      </a>
+    </div>
+
+    <h2>Use it with a chatbot</h2>
+    <ol class="steps">
+      <li>Download the <strong>Standalone instructions</strong> above and upload (or paste) it into ChatGPT, Claude, Gemini, or similar.</li>
+      <li>Ask for a deck. For example:</li>
+    </ol>
+    <blockquote>Using the Web Deck v5 system in the document I just gave you, build a <strong>single self-contained HTML file</strong> deck on <strong>[topic]</strong> for <strong>[audience]</strong>, about <strong>[N]</strong> slides. Paste Appendix A into one <code>&lt;style&gt;</code> and Appendix B verbatim into one <code>&lt;script&gt;</code>. Write real teleprompter speaker notes in every slide. Output the complete file.</blockquote>
+    <p>The chatbot returns one portable <code>.html</code> you save and open — nothing else required.</p>
+
+    <h2>Use it in a project</h2>
+    <p>Copy <code>assets/deck-framework.css</code> and <code>assets/deck-framework.js</code> into your project's <code>assets/</code>, copy <code>decks/template-deck.html</code>, re-skin the palette and fonts in the deck's own <code>&lt;style&gt;</code>, and replace the slides. Full details in the <a href="webdeck_spec_v5.md">spec</a>.</p>
+
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <span>Web Deck v5 · MIT License · © 2026 Miguel Guhlin</span>
+    <span><a href="https://github.com/mguhlin/webdecks">Source on GitHub</a></span>
+  </div>
+</footer>
+</body>
+</html>
