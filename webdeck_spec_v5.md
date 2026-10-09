@@ -250,8 +250,8 @@ All chrome is hidden by the print stylesheet.
 
 **Notes.** Every slide carries `<div class="notes"><p>…</p></div>`. Hidden on the slide; surfaced two ways:
 
-- **On the current screen** — press **S** (or **N**) to slide up a notes panel.
-- **On a second monitor** — press **V** (or 🖥) to open a **presenter window**: current slide, next slide, notes in large type, an elapsed **timer** (click to pause; Reset button), and a clock. Put the main window on the projector, press **F** for fullscreen. The two windows stay in sync via `BroadcastChannel` + a `localStorage` fallback (same-origin).
+- **On the current screen** — press **S** (or **N**) to slide up a notes panel. Dismiss it the same way, with the **×** button in the panel header, or with **Esc**.
+- **On a second monitor** — press **V** (or 🖥) to open a **presenter window**: current slide, next slide, notes in large type, an elapsed **timer** (click to pause; Reset button), and a clock. Put the main window on the projector, press **F** for fullscreen. The two windows stay in sync via `BroadcastChannel` + a `localStorage` fallback (same-origin). Close the presenter window with its **✕ Close** button (top bar) or **Esc** — no need to hunt for the OS window control.
 - **Resizing the notes** — the presenter window's Speaker-notes panel carries **A− / A+** buttons (right of the "Speaker notes" label) to shrink or enlarge the notes text mid-talk; the **+** and **−** keys do the same. The size is clamped and **persists** across sessions via `localStorage` (key `webdeck-notes-scale`; default 20 px / scale 1.0).
 
 **Writing the notes — teleprompter text, not stage directions:** first person, conversational; ~90–130 words per slide; cover what to say, what to watch for, and the transition. No em dashes. No meta-remarks ("say this…"). Put facilitator "how to run it" guidance here, not on the projected slide.
