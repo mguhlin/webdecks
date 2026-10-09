@@ -286,6 +286,12 @@ Then open the PNG. Crop a detail with `magick /tmp/slide.png -crop 120x70+0+0 +r
 
 1. Copy `webdeck/assets/deck-framework.{css,js}` into the project's `assets/` (or confirm they're current). Copy `webdeck/decks/template-deck.html` as a starting deck.
 2. Link the Google Fonts + `../assets/deck-framework.css` in `<head>`; add a deck-local `<style>` for the project skin (§1.1) and any one-offs.
+   - Keep the **invisible framework attribution** in the `<head>` — the template ships it and it never renders on a slide:
+     ```html
+     <!-- Built with Web Deck v5 — https://mguhlin.github.io/webdecks/ · Developed by Miguel Guhlin - mguhlin.org · MIT -->
+     <meta name="generator" content="Web Deck v5 (https://mguhlin.github.io/webdecks/) — developed by Miguel Guhlin - mguhlin.org">
+     ```
+     This credits the **framework**, not the deck. Put the deck's own owner in the footer / cover (`Facilitator: Name`), never the framework author — the framework author's name must not appear on any slide.
 3. Open `<div class="deck">`. One `<section class="slide …">` per slide; give the **first** one `current`.
 4. Start with a `cover`, use `divider` slides between segments, `content` slides between.
 5. On every slide include the `.slide-footer` (sibling of `.slide-body`) and a `.notes` block.

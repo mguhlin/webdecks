@@ -1,5 +1,7 @@
 /* ============================================================
    Web Deck Framework (v5): navigation, presenter view, sync, print
+   Developed by Miguel Guhlin - mguhlin.org · https://mguhlin.github.io/webdecks/
+   Free to use (MIT). This header is attribution only; it never renders on a slide.
    No dependencies. Include once per deck, after the slides.
    Two-monitor use: press V (or the 🖥 button) to open the
    presenter window on your laptop; drag the main window to the
