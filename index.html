@@ -27,11 +27,17 @@
   .wrap{max-width:860px;margin:0 auto;padding:0 24px}
   header{background:radial-gradient(120% 90% at 12% -10%,#1B3E6E 0%,rgba(27,62,110,0) 55%),linear-gradient(160deg,#0E2545 0%,#081627 100%);color:#F4F8FE;position:relative;overflow:hidden}
   header::before{content:"";position:absolute;left:0;top:0;bottom:0;width:8px;background:var(--metal)}
-  header .wrap{padding:64px 24px 56px}
+  header .wrap{display:grid;gap:32px;padding:48px 24px 40px}
   .eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--silver);margin-bottom:16px}
   h1{font-family:var(--display);font-size:clamp(38px,7vw,64px);font-weight:600;line-height:1.02;letter-spacing:-.02em;color:#F4F8FE}
   .lede{font-family:var(--display);font-style:italic;font-size:clamp(18px,2.6vw,23px);color:var(--silver);margin-top:18px;max-width:46ch}
-  .hero-shot{display:block;width:100%;max-width:720px;margin:36px 0 0;border-radius:12px;border:1px solid rgba(200,210,220,.22);box-shadow:0 1px 2px rgba(0,0,0,.2),0 24px 60px rgba(0,0,0,.35)}
+  .hero-copy{min-width:0}
+  .hero-copy .lede{margin-bottom:0}
+  .hero-shot{display:block;width:100%;height:auto;max-width:440px;justify-self:center;border-radius:12px;border:1px solid rgba(200,210,220,.22);box-shadow:0 1px 2px rgba(0,0,0,.2),0 24px 60px rgba(0,0,0,.35)}
+  @media(min-width:900px){
+    header .wrap{max-width:1120px;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:48px;padding:64px 24px 56px}
+    .hero-shot{max-width:480px;justify-self:end}
+  }
   main .wrap{padding:52px 24px 72px}
   h2{font-family:var(--display);font-size:28px;font-weight:600;color:var(--navy);margin:44px 0 14px;padding-top:26px;border-top:1px solid var(--hair)}
   h2:first-child{border-top:0;padding-top:0;margin-top:0}
@@ -64,10 +70,12 @@
 <body>
 <header>
   <div class="wrap">
-    <div class="eyebrow">✦ Open slide-deck system · MIT licensed</div>
-    <h1>Web Deck v5</h1>
-    <p class="lede">A tiny system for self-contained HTML slide decks. No build step, no framework, no dependency beyond Google Fonts.</p>
-    <img class="hero-shot" src="assets/hero.png" width="1032" height="894" alt="The same Web Deck v5 deck shown on a desktop monitor, a laptop with speaker notes, a phone, and exported to PDF." loading="eager" decoding="async">
+    <div class="hero-copy">
+      <div class="eyebrow">✦ Open slide-deck system · MIT licensed</div>
+      <h1>Web Deck v5</h1>
+      <p class="lede">A tiny system for self-contained HTML slide decks. No build step, no framework, no dependency beyond Google Fonts.</p>
+    </div>
+    <img class="hero-shot" src="assets/hero.webp" width="1032" height="894" alt="The same Web Deck v5 deck shown on a desktop monitor, a laptop with speaker notes, a phone, and exported to PDF." loading="eager" decoding="async">
   </div>
 </header>
 <main>
