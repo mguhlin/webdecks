@@ -102,7 +102,14 @@ body:has(.deck:not(.reflow) .rubric-slide.current) #controls {width:calc(12.5vw 
 .deck.reflow .rubric-slide .slide-body {padding:52px 0 0;}
 .deck.reflow .rubric-figure,.deck.reflow .rubric-figure a {height:auto;flex:none;}
 .deck.reflow .rubric-figure img {height:auto;}
+.facilitator-layout {display:grid;grid-template-columns:minmax(0,1fr) 312px;gap:44px;align-items:center;margin-top:18px;}
+.facilitator-copy {min-width:0;}
+.facilitator-copy .bullets {margin-top:0;}
+.facilitator-photo {margin:0;}
+.facilitator-photo img {display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--hair);box-shadow:var(--sh-lift);}
 .deck.reflow .facilitator .slide-body {padding-top:60px;}
+.deck.reflow .facilitator-layout {display:flex;flex-direction:column;gap:24px;margin-top:12px;}
+.deck.reflow .facilitator-photo {order:-1;width:220px;max-width:100%;}
 @media (max-width:650px) { .deck.reflow .shine-grid,.deck.reflow .protect-grid,.deck.reflow .ace-steps,.deck.reflow .resource-grid,.deck.reflow .poll-shell {grid-template-columns:1fr;}.deck.reflow .solo-level {display:block;}.deck.reflow .solo-level small {display:block; text-align:left;}.deck.reflow .arrow-bridge {flex-direction:column;}.deck.reflow .arrow-bridge .arr {transform:rotate(90deg);}.deck.reflow .stakeholder-row span {font-size:.85rem;} }
 @media print { .poll-answer {border-color:#CBD4DE;} }
 
@@ -119,13 +126,16 @@ body:has(.deck:not(.reflow) .rubric-slide.current) #controls {width:calc(12.5vw 
 
 <section class="slide facilitator"><div class="slide-body"><div class="slide-kicker">Your facilitator</div><h2 class="slide-title">About the Facilitator</h2>
 <p class="lead"><strong>J. Miguel Guhlin</strong><br>Director of Professional Development · TCEA</p>
-<ul class="bullets">
-<li>Over 30 years in K–12 teaching, learning, and technology leadership</li>
-<li>Designs professional learning for responsible AI adoption</li>
-<li>Creator of the SHINE Framework and PROTECT Rubric</li>
+<div class="facilitator-layout"><div class="facilitator-copy"><ul class="bullets">
+<li>30+ years in K–12 teaching and technology leadership</li>
+<li>Professional learning in high-effect size instructional strategies</li>
+<li>Creator of ACE: Articulate, Connect, Extend</li>
+<li>Developer of SHINE and PROTECT for responsible AI use</li>
 </ul>
-<div class="next-step no-advance"><span class="ns-label">Connect</span><a href="https://mguhlin.org/about/" target="_blank" rel="noopener noreferrer">mguhlin.org/about <span class="arrow">↗</span></a></div>
-</div><div class="slide-footer"><span class="brand"><span class="star">✦</span> AI Policies That Don’t Expire</span><span class="fac">J. Miguel Guhlin · TCEA</span><span class="url">mguhlin.org</span></div><div class="notes"><p>I'm Miguel Guhlin, Director of Professional Development at TCEA. For over thirty years, I've worked with K–12 educators and districts on teaching, learning, and technology leadership. My background includes classroom teaching, district technology leadership, and professional learning. Today, I help educators and school leaders make practical decisions about AI adoption. I created SHINE and PROTECT to support that work, connecting classroom fit with privacy, safety, and governance. That experience shapes today's session: start with the learning need, ask clear questions about the technology, and use evidence to decide what comes next.</p><p class="note-source">Biography: <a href="https://mguhlin.org/about/" target="_blank" rel="noopener noreferrer">Miguel Guhlin · About</a></p></div></section>
+<div class="next-step no-advance"><span class="ns-label">Connect</span><a href="https://mguhlin.org/about/" target="_blank" rel="noopener noreferrer">mguhlin.org/about <span class="arrow">↗</span></a></div></div>
+<!-- Photo: Miguel Guhlin's TCEA author page, https://blog.tcea.org/author/mguhlin/ -->
+<figure class="facilitator-photo"><img src="miguel-guhlin.webp" width="960" height="1200" alt="J. Miguel Guhlin, Director of Professional Development at TCEA"></figure></div>
+</div><div class="slide-footer"><span class="brand"><span class="star">✦</span> AI Policies That Don’t Expire</span><span class="fac">J. Miguel Guhlin · TCEA</span><span class="url">mguhlin.org</span></div><div class="notes"><p>I'm Miguel Guhlin, Director of Professional Development at TCEA. For over thirty years, I've worked in K–12 teaching, district technology leadership, and professional learning. My work connects high-effect size instructional strategies with evidence-informed learning and responsible AI use. I developed ACE, Articulate, Connect, Extend, to help educators make student thinking visible and look beyond a polished product. ACE connects with SOLO and the progression from surface to deep to transfer learning. SHINE and PROTECT address the complementary questions of classroom fit, privacy, safety, and governance. Together, these tools keep today's conversation focused on what students understand and what schools can responsibly support.</p><p class="note-source">Biography: <a href="https://mguhlin.org/about/" target="_blank" rel="noopener noreferrer">Miguel Guhlin · About</a> · <a href="https://mguhlin.org/2026-curriculum-vitae/" target="_blank" rel="noopener noreferrer">Curriculum vitae and ACE framework</a> · <a href="https://blog.tcea.org/author/mguhlin/" target="_blank" rel="noopener noreferrer">TCEA author photo</a></p></div></section>
 
 <section class="slide "><div class="slide-body"><div class="slide-kicker">The leadership challenge</div><h2 class="slide-title">Guidelines spread. Capabilities change.</h2><p class="lead">A policy written for chatbots may be tested by agents and embedded AI.</p>
 <div class="stat-row stats-tight"><div class="stat"><div class="num">79%</div><div class="lbl">districts report AI guidelines<br><small>CoSN, 2026</small></div></div><div class="stat"><div class="num">56%</div><div class="lbl">report acceptable-use policies for Gen AI<br><small>CoSN, 2026</small></div></div></div>
