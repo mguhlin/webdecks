@@ -199,7 +199,7 @@
         '<div class="pv-right">' +
           '<div class="pv-next-wrap">' +
             '<div class="pv-label"><span class="dot"></span>Next up</div>' +
-            '<div class="pv-frame" id="pvNext"></div>' +
+            '<div class="pv-frame" id="pvNextFrame"></div>' +
           '</div>' +
           '<div style="display:flex;flex-direction:column;min-height:0;flex:1;">' +
             '<div class="pv-label"><span class="dot"></span><span>Speaker notes</span>' +
@@ -213,7 +213,7 @@
     document.body.appendChild(wrap);
 
     var elCur = document.getElementById('pvCurrent');
-    var elNext = document.getElementById('pvNext');
+    var elNext = document.getElementById('pvNextFrame');
     var elNotes = document.getElementById('pvNotes');
     var elCount = document.getElementById('pvCount');
 
