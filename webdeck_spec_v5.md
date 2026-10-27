@@ -303,6 +303,11 @@ Then open the PNG. Crop a detail with `magick /tmp/slide.png -crop 120x70+0+0 +r
 9. Write teleprompter notes for **every** slide before calling it done.
 10. Render each new/edited slide headless (§10) at 1280×720 **and** phone width.
 
+
+## Warm, direct language for every webdeck
+
+Speak to educators as colleagues. Use “you” and “we,” natural contractions, and first-person speaker notes (“Here’s how I’d approach this”). Prefer “What would you do next?” to “Participants will identify the subsequent action.” On audience slides, use relatable situations, clear choices, and short explanations; reserve formal terminology for precision, then explain it in everyday words. Give fictional cases a human focus and identify them as fictional. Avoid detached third-person phrases such as “the presenter supplies the model” when “I’ll walk you through it” fits. Do not add forced enthusiasm, slogans, or unsupported personal anecdotes. Apply this voice to titles, prompts, explanations, takeaways, and speaker notes while preserving factual accuracy and accessibility.
+
 ### On-slide writing style
 
 Second person · Oxford comma · spell out numbers one through ten · **no em dashes** · **no ampersands** (use "and") · **no colons in titles** · avoid hype words (empower, journey, embark, delve, unlock, elevate, discover, master).
