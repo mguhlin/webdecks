@@ -17,3 +17,5 @@ Both decks use a photorealistic title image, Miguel Guhlin facilitator profile o
 Beyond the Rollout is presenter-led and uses a shared district case and completed worked framework. No attendee project or preparation is required. Brief decision discussions fit the fifty-minute plan. Original ADKAR, Kotter, KPI, milestone, and risk infographics follow the user-supplied infographic instructions; sources appear on model slides.
 
 Slides six through twenty of Beyond the Rollout now combine photorealistic fictional school scenes with explanations of who acts, what they do, and what evidence they check. ADKAR and Kotter each have case-based explanations. The math deck has its own graph comparisons, number-line arrows, graph-selection pathway, sampling, reasoning, retrieval, and ACE infographics. Both retain twenty slides and fifty minutes. Warm, direct language is the default in the canonical spec and standalone instructions.
+
+Access controls stay off projected slides. Use keyboard help (?) or the separate presenter toolbar for Forget access and lock. The generated-image disclosure is on the public workshop page rather than under slide photographs.
