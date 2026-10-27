@@ -19,3 +19,9 @@ Beyond the Rollout is presenter-led and uses a shared district case and complete
 Slides six through twenty of Beyond the Rollout now combine photorealistic fictional school scenes with explanations of who acts, what they do, and what evidence they check. ADKAR and Kotter each have case-based explanations. The math deck has its own graph comparisons, number-line arrows, graph-selection pathway, sampling, reasoning, retrieval, and ACE infographics. Both retain twenty slides and fifty minutes. Warm, direct language is the default in the canonical spec and standalone instructions.
 
 Access controls stay off projected slides. Use keyboard help (?) or the separate presenter toolbar for Forget access and lock. The generated-image disclosure is on the public workshop page rather than under slide photographs.
+
+## Play, Explore, Explain: Cooperative Learning in Action
+
+Open https://mguhlin.github.io/webdecks/tcea27/play-explore-explain.html . Twenty slides and exactly fifty minutes: concept Bingo0–9; cooperative routines9–18; two exploration rounds18–34; sharing34–42; classroom adaptation42–47; recall and closure47–50. Six requested tools: Bingo Card Generator/Caller, Quiz and Flashcard Studio, Meme Puzzle, Story Wheel, Dicebreaker Creator, Fortune Wheel. All slides have an original illustrative photo or native infographic; warm first-person speaker notes, facilitator second, clear success criteria.
+
+Public companion, tasks, starter files, four PDF/HTML handouts: https://mglearn.github.io/tcea27/sessions/play-explore-explain/ . Remembered presenter access uses the same gate and stays off audience slides. External tools require internet access; the local Bingo and protected deck are in the offline packet.
