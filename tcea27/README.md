@@ -10,6 +10,8 @@ Current content is encrypted with AES-256-GCM and a PBKDF2-SHA256 key (600,000 i
 
 To update, edit the private source outside public Git, regenerate the deck using canonical framework copies, seal it with the conference project's seal-presenter.cjs, copy the encrypted output here, and run the conference presenter tests against both hosts. Do not commit plaintext notes, a password, decrypted screenshots, or a notes PDF.
 
-Project Management and Change Leadership: https://mguhlin.github.io/webdecks/tcea27/project-management.html — twenty slides in fifty minutes, including a school project case, paired planning, stakeholder/dependency analysis, risk and change leadership, feedback, and revision.
+Beyond the Rollout: Project Management That Works in K–12: https://mguhlin.github.io/webdecks/tcea27/project-management.html — twenty slides in fifty minutes, including a school project case, paired planning, stakeholder/dependency analysis, risk and change leadership, feedback, and revision.
 
 Both decks use a photorealistic title image, Miguel Guhlin facilitator profile on slide two, a session overview, success criteria, and locally embedded infographic-style diagrams. Future-session design instructions: https://mglearn.github.io/tcea27/design-system/deck-guidelines.md . The reusable project skin is assets/tcea27-deck-theme.css.
+
+Beyond the Rollout is presenter-led and uses a shared district case and completed worked framework. No attendee project or preparation is required. Brief decision discussions fit the fifty-minute plan. Original ADKAR, Kotter, KPI, milestone, and risk infographics follow the user-supplied infographic instructions; sources appear on model slides.
