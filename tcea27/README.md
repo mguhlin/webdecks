@@ -25,3 +25,9 @@ Access controls stay off projected slides. Use keyboard help (?) or the separate
 Open https://mguhlin.github.io/webdecks/tcea27/play-explore-explain.html . Twenty slides and exactly fifty minutes: concept Bingo0–9; cooperative routines9–18; two exploration rounds18–34; sharing34–42; classroom adaptation42–47; recall and closure47–50. Six requested tools: Bingo Card Generator/Caller, Quiz and Flashcard Studio, Meme Puzzle, Story Wheel, Dicebreaker Creator, Fortune Wheel. All slides have an original illustrative photo or native infographic; warm first-person speaker notes, facilitator second, clear success criteria.
 
 Public companion, tasks, starter files, four PDF/HTML handouts: https://mglearn.github.io/tcea27/sessions/play-explore-explain/ . Remembered presenter access uses the same gate and stays off audience slides. External tools require internet access; the local Bingo and protected deck are in the offline packet.
+
+## Coaching That Clicks: Small Moments, Meaningful Growth
+
+Open https://mguhlin.github.io/webdecks/tcea27/coaching-that-clicks.html . Twenty slides expand the supplied seven-part outline within exactly fifty minutes: Connect 0–5; Trust 5–11; Observe 11–20; Notice-Wonder-Next 20–30; Coaching practice 30–41; Sprint planning 41–47; ACE 47–50. The title photo, facilitator profile second, success criteria, native diagrams, and speaker notes follow the shared TCEA27 design. Video opens at its original source; the exact excerpt and accessibility checks remain presenter preparation steps.
+
+Public companion, five printable PDF/HTML resources, fictional video backup, and memory-only notes: https://mglearn.github.io/tcea27/sessions/coaching-that-clicks/ . Presenter notes and guide remain encrypted. The offline packet includes the protected materials; external videos and research need connectivity.
