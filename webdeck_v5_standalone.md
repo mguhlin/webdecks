@@ -71,7 +71,7 @@ Single-file skeleton:
 # Web Deck Instructions — v5 (canonical, project-neutral)
 
 *The single source of truth for the self-contained HTML slide-deck system used across `~/Documents/vibecoding` projects.*
-*Canonical location: `~/Documents/vibecoding/webdeck/`. Last revised 2026-10-21.*
+*Canonical location: `~/Documents/vibecoding/webdeck/`.*
 
 Any agent (Claude Code, ChatGPT/Codex, or a human) that is asked to **build or edit a web deck / slide deck** in any vibecoding project should follow this file. It is intentionally self-contained and tool-neutral: nothing here depends on a particular assistant. The reference framework lives beside it at `webdeck/assets/deck-framework.css` and `webdeck/assets/deck-framework.js`.
 
@@ -324,7 +324,7 @@ All chrome is hidden by the print stylesheet.
 - **On a second monitor** — press **V** (or 🖥) to open a **presenter window**: current slide, next slide, notes in large type, an elapsed **timer** (click to pause; Reset button), and a clock. Put the main window on the projector, press **F** for fullscreen. The two windows stay in sync via `BroadcastChannel` + a `localStorage` fallback (same-origin). Close the presenter window with its **✕ Close** button (top bar) or **Esc** — no need to hunt for the OS window control.
 - **Resizing the notes** — the presenter window's Speaker-notes panel carries **A− / A+** buttons (right of the "Speaker notes" label) to shrink or enlarge the notes text mid-talk; the **+** and **−** keys do the same. The size is clamped and **persists** across sessions via `localStorage` (key `webdeck-notes-scale`; default 20 px / scale 1.0).
 
-**Presenter element IDs.** Keep the next-slide button (`pvNext`) separate from the next-slide preview frame (`pvNextFrame`). The preview renderer must target `pvNextFrame`; duplicate IDs would replace the navigation button with a slide preview. This correction was synchronized on 2026-10-21.
+**Presenter element IDs.** Keep the next-slide button (`pvNext`) separate from the next-slide preview frame (`pvNextFrame`). The preview renderer must target `pvNextFrame`; duplicate IDs would replace the navigation button with a slide preview.
 
 **Writing the notes — teleprompter text, not stage directions:** first person, conversational; ~90–130 words per slide; cover what to say, what to watch for, and the transition. No em dashes. No meta-remarks ("say this…"). Put facilitator "how to run it" guidance here, not on the projected slide.
 
@@ -378,6 +378,10 @@ Then open the PNG. Crop a detail with `magick /tmp/slide.png -crop 120x70+0+0 +r
 
 Speak to educators as colleagues. Use “you” and “we,” natural contractions, and first-person speaker notes (“Here’s how I’d approach this”). Prefer “What would you do next?” to “Participants will identify the subsequent action.” On audience slides, use relatable situations, clear choices, and short explanations; reserve formal terminology for precision, then explain it in everyday words. Give fictional cases a human focus and identify them as fictional. Avoid detached third-person phrases such as “the presenter supplies the model” when “I’ll walk you through it” fits. Do not add forced enthusiasm, slogans, or unsupported personal anecdotes. Apply this voice to titles, prompts, explanations, takeaways, and speaker notes while preserving factual accuracy and accessibility.
 
+### Public dates
+
+Do not include maintenance, build, revision, or “last updated” dates in public decks, resource pages, instructions, or exports. Preserve a presentation date only when the user deliberately includes it, and preserve substantive dates in the teaching content.
+
 ### On-slide writing style
 
 Second person · Oxford comma · spell out numbers one through ten · **no em dashes** · **no ampersands** (use "and") · **no colons in titles** · avoid hype words (empower, journey, embark, delve, unlock, elevate, discover, master).
@@ -398,6 +402,7 @@ Most vibecoding decks are static sites on **GitHub Pages**, deployed by pushing 
 git add <files> && git commit -m "…"
 git push origin main            # Pages auto-builds
 # confirm live: curl -s -o /dev/null -w '%{http_code}' https://<user>.github.io/<repo>/<path>
+
 ```
 
 Notes:
